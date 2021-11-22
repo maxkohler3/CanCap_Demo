@@ -70,19 +70,25 @@ Upload PDF Bank Statements
     SwitchWindow               1
     ClickText                  Next
     VerifyText                 Documents for Applications and Fundings can be uploaded here
+    Sleep                      10
     ClickText                  Bank Statements   anchor=3
-    ClickUntil                 text_to_disappear         cloud_upload      css=off                    
+    ClickText                  cloud_upload      css=off                   
     QVision.ClickText          tests 
     QVision.ClickText          suite
     QVision.ClickUntil         pdf               files 
     QVision.ClickText          Feb-Aug.pdf         
-    QVision.ClickText          Open              anchor=Cancel
+    QVision.ClickUntil         1 of 1          Open         anchor=Cancel   
     VerifyText                 Feb-Aug.pdf
+    ClickText                  cloud_upload      css=off    DoubleClick=true                
+    # QVision.ClickText          tests 
+    # QVision.ClickText          suite
+    # QVision.ClickUntil         pdf               files 
+    QVision.ClickText          Set.pdf         
+    QVision.ClickUntil         2 of 2            Open       anchor=Cancel    
     VerifyText                 Set.pdf
     ClickText                  Next        
     ClickText                  I have read and agree to the above disclosure    css=off
     ClickText                  Submit
-    Sleep                      30
     VerifyText                 Your application has been successfully submitted for review
 
 Verify Application Status updated after PDF Upload                 
