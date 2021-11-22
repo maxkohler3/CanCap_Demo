@@ -73,14 +73,11 @@ Upload PDF Bank Statements
     VerifyText    Documents for Applications and Fundings can be uploaded here
     ClickText     Bank Statements   anchor=Stipulations
     ClickText     cloud_upload      css=off         DoubleClick=true
-    #ClickText     Downloads         DoubleClick=true
-    #ClickText     tests
-    #ClickText     suite
-    #ClickText     files
-   
-    #execution path different in live editor 
-    #Unable to automate steps when accessing Linux directory in container
-
+    QVision.ClickText               tests 
+    QVision.ClickText               suite
+    QVision.ClickUntil              pdf               files 
+    QVision.ClickText               Feb-Aug.pdf         
+    QVision.ClickText               Open              anchor=Cancel
     VerifyText    Feb-Aug.pdf
     VerifyText    Set.pdf
     ClickText     Next        
