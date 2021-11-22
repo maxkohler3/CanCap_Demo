@@ -61,8 +61,7 @@ Verify Application Entered in Salesforce
     VerifyText    Home  
     ClickText     Applications
     ClickText     Select List View
-    ClickText     All        
-    
+    ClickText     All         
     ClickText     ${applicationId}
     VerifyText    Status: NEW ENTERED        anchor=2
               
@@ -79,9 +78,7 @@ Upload PDF Bank Statements
     ClickText     tests
     ClickText     suite
     ClickText     files
-    ClickText     
-    
-
+   
     #execution path different in live editor 
     #Unable to automate steps when accessing Linux directory in container
 
@@ -96,23 +93,16 @@ Upload PDF Bank Statements
 Verify Application Status updated after PDF Upload                 
     [tags]        Salesforce        
     SwitchWindow  2
-    Sleep         30
-    # ^what's best pratice to wait extended periods and verify expected result once event has occurred
     ClickUntil    Overall Status: SCORING         Refresh        interval=2
-    ClickText     Refresh
     VerifyText    Overall Status: SCORING 
-    ClickText     Credit Scoring Details   
-    #VerifyTableCell   No Credit Report Details to Display   (in 3 tables under each section)
-    #is above step necessary? 
 
 Verify Credit Reports Generated in Salesforce
     [tags]        Salesforce  
     Sleep         30
     ClickText     Refresh
     VerifyText    Status: BANK STATEMENT PROCESSING
-    VerifyText    VERIFYING
-    #UseTable      Ocrolus Report
-    #VerifyTableCell      r1c2 VERIFYING (in Ocrolus Report table under Overall Document Status)
+    VerifyText    VERIFYING          #(in Ocrolus Report table under Overall Document Status)
+
       
 
 
