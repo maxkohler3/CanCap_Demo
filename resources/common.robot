@@ -1,6 +1,7 @@
 *** Settings ***
 Library                   QForce
 Library                   QWeb
+Library                   QVision
 Library                   String
 
 
