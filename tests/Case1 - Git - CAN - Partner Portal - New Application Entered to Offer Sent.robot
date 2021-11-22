@@ -5,8 +5,8 @@ Suite Teardown                End suite
 
 
 *** Test Cases ***
-Entering A Lead
-    [tags]        Partner Portal, Salesforce, Lead
+Fill Out Partner Application
+    [tags]        Partner Portal
     Appstate      Partner Login
     VerifyText    Dashboard    timeout=30    
     
@@ -20,7 +20,7 @@ Entering A Lead
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            111095123
+    TypeText      Business Tax ID            111222123
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -43,7 +43,7 @@ Entering A Lead
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            222748285
+    TypeText      Social Security            111748285
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
@@ -54,7 +54,8 @@ Entering A Lead
     ${applicationID}    GetText     APP-
     VerifyText          ${applicationId}
 
-
+Verify Application Entered in Salesforce
+    [tags]        Salesforce
     OpenWindow
     Salesforce Login
     VerifyText    Home  
@@ -76,7 +77,8 @@ Entering A Lead
     ClickText     set.pdf                    
 
 
-
+Upload PDF Bank Statements    
+    [tags]        Partner Portal
     SwitchWindow  1
     ClickText     Next
     VerifyText    Documents for Applications and Fundings can be uploaded here
@@ -89,19 +91,19 @@ Entering A Lead
     ClickText     
     
 
-    #upload 1 by 1. how to access pdf files?
     #execution path different in live editor 
-    #Upload bank statements from Git directory - best practce, test data auditable
-    #Email docs, access from Linux directory in container
-    #after above cloud_upload step, local directory opens; tests folder visible; unable to see other folders in Test Suite
-    VerifyText    #name of statement#1
-    VerifyText    #name of statement#2
+    #Unable to automate steps when accessing Linux directory in container
+
+    VerifyText    Feb-Aug.pdf
+    VerifyText    Set.pdf
     ClickText     Next        
     ClickText     I have read and agree to the above disclosure    css=off
     ClickText     Submit
     Sleep         30
     VerifyText    Your application has been successfully submitted for review
-        
+
+Verify Application Status updated after PDF Upload                 
+    [tags]        Salesforce        
     SwitchWindow  2
     Sleep         30
     # ^what's best pratice to wait extended periods and verify expected result once event has occurred
@@ -111,7 +113,9 @@ Entering A Lead
     ClickText     Credit Scoring Details   
     #VerifyTableCell   No Credit Report Details to Display   (in 3 tables under each section)
     #is above step necessary? 
-  
+
+Verify Credit Reports Generated in Salesforce
+    [tags]        Salesforce  
     Sleep         30
     ClickText     Refresh
     VerifyText    Status: BANK STATEMENT PROCESSING
