@@ -1,6 +1,7 @@
 *** Settings ***
 Library                   QForce
 Library                   QWeb
+Library                   QVision
 Library                   String
 
 
@@ -16,6 +17,7 @@ ${gmail_pass}            Copado2021
 
 *** Keywords ***
 Setup Browser
+    Set Library Search Order    QWeb
     Open Browser          about:blank                 ${BROWSER}
     SetConfig             LineBreak                   ${EMPTY}               #\ue000
     SetConfig             DefaultTimeout              20s                    #sometimes salesforce is slow
