@@ -20,7 +20,7 @@ Fill Out Partner Application
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            111222123
+    TypeText      Business Tax ID            111222333
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -43,14 +43,13 @@ Fill Out Partner Application
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            111748285
+    TypeText      Social Security            111748555
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
     TypeText      Zip                        31145               anchor=DOB
     TypeText      Country                    United States       anchor=DOB
     ClickText     Create Application 
-    UseTable      Application ID
     ${applicationID}    GetText     APP-
     VerifyText          ${applicationId}
 
@@ -95,7 +94,7 @@ Verify Application Status updated after PDF Upload
 Verify Credit Reports Generated in Salesforce
     [tags]        Salesforce  
     Sleep         30
-    ClickText     Refresh
+    ClickUntil    Status: BANK STATEMENT PROCESSING     Refresh
     VerifyText    Status: BANK STATEMENT PROCESSING
     VerifyText    VERIFYING          #(in Ocrolus Report table under Overall Document Status)
       
