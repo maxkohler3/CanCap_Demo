@@ -66,12 +66,12 @@ Verify Application Entered in Salesforce
               
 
 Upload PDF Bank Statements    
-    [tags]        Partner Portal
-    SwitchWindow  1
-    ClickText     Next
-    VerifyText    Documents for Applications and Fundings can be uploaded here
-    ClickText     Bank Statements   anchor=Stipulations
-    ClickText     cloud_upload      css=off         DoubleClick=true
+    [tags]                          Partner Portal
+    SwitchWindow                    1
+    ClickText                       Next
+    VerifyText                      Documents for Applications and Fundings can be uploaded here
+    ClickText                       Bank Statements   anchor=3
+    ClickUntil                      text_to_disappear         cloud_upload      css=off                    
     QVision.ClickText               tests 
     QVision.ClickText               suite
     QVision.ClickUntil              pdf               files 
