@@ -72,7 +72,7 @@ Upload PDF Bank Statements
     VerifyText                 Documents for Applications and Fundings can be uploaded here
     Sleep                      10
     ClickText                  Bank Statements   anchor=3
-    ClickText                  cloud_upload      css=off                   
+    ClickText                  cloud_upload      css=off     DoubleClick=true                
     QVision.ClickText          tests 
     QVision.ClickText          suite
     QVision.ClickUntil         pdf               files 
@@ -80,9 +80,9 @@ Upload PDF Bank Statements
     QVision.ClickUntil         1 of 1          Open         anchor=Cancel   
     VerifyText                 Feb-Aug.pdf
     ClickText                  cloud_upload      css=off    DoubleClick=true                
-    # QVision.ClickText          tests 
-    # QVision.ClickText          suite
-    # QVision.ClickUntil         pdf               files 
+    QVision.ClickText          tests 
+    QVision.ClickText          suite
+    QVision.ClickUntil         pdf               files 
     QVision.ClickText          Set.pdf         
     QVision.ClickUntil         2 of 2            Open       anchor=Cancel    
     VerifyText                 Set.pdf
