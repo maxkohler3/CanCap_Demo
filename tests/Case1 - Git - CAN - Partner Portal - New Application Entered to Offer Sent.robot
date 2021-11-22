@@ -71,7 +71,7 @@ Upload PDF Bank Statements
     SwitchWindow  1
     ClickText     Next
     VerifyText    Documents for Applications and Fundings can be uploaded here
-    ClickText     Bank Statements   anchor=3
+    ClickText     Bank Statements   anchor=Stipulations
     ClickText     cloud_upload      css=off         DoubleClick=true
     UploadFile       ../files/Set.pdf
     ClickText     Downloads         DoubleClick=true
