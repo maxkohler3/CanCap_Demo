@@ -73,11 +73,10 @@ Upload PDF Bank Statements
     VerifyText    Documents for Applications and Fundings can be uploaded here
     ClickText     Bank Statements   anchor=Stipulations
     ClickText     cloud_upload      css=off         DoubleClick=true
-    UploadFile       ../files/Set.pdf
-    ClickText     Downloads         DoubleClick=true
-    ClickText     tests
-    ClickText     suite
-    ClickText     files
+    #ClickText     Downloads         DoubleClick=true
+    #ClickText     tests
+    #ClickText     suite
+    #ClickText     files
    
     #execution path different in live editor 
     #Unable to automate steps when accessing Linux directory in container
@@ -102,7 +101,6 @@ Verify Credit Reports Generated in Salesforce
     ClickText     Refresh
     VerifyText    Status: BANK STATEMENT PROCESSING
     VerifyText    VERIFYING          #(in Ocrolus Report table under Overall Document Status)
-
       
 
 
