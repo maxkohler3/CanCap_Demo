@@ -65,17 +65,7 @@ Verify Application Entered in Salesforce
     
     ClickText     ${applicationId}
     VerifyText    Status: NEW ENTERED        anchor=2
-
-    
-    OpenWindow    
-    Gmail login
-    ClickText                Set.pdf
-    ClickText                Download        visibility=false
-    ClickText                 Bank Statements TC1
-    ClickText                 Download all attachments           css=off
-    #ClickText                 //[@class=\["aZh T-I-J3 J-J5-Ji"]
-    ClickText     set.pdf                    
-
+              
 
 Upload PDF Bank Statements    
     [tags]        Partner Portal
@@ -83,7 +73,8 @@ Upload PDF Bank Statements
     ClickText     Next
     VerifyText    Documents for Applications and Fundings can be uploaded here
     ClickText     Bank Statements   anchor=3
-    ClickText     cloud_upload      css=off
+    ClickText     cloud_upload      css=off         DoubleClick=true
+    UploadFile       ../files/Set.pdf
     ClickText     Downloads         DoubleClick=true
     ClickText     tests
     ClickText     suite
