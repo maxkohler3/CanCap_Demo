@@ -19,7 +19,7 @@ Fill Out Partner Application
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            777444666
+    TypeText      Business Tax ID            777555666
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -42,7 +42,7 @@ Fill Out Partner Application
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            999888555
+    TypeText      Social Security            999666555
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
