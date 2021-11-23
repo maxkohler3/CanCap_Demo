@@ -3,7 +3,6 @@ Resource                      ../resources/common.robot
 Suite Setup                   Setup Browser
 Suite Teardown                End suite
 
-
 *** Test Cases ***
 Fill Out Partner Application
     [tags]        Partner Portal
@@ -20,7 +19,7 @@ Fill Out Partner Application
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            111999333
+    TypeText      Business Tax ID            000123456
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -43,14 +42,14 @@ Fill Out Partner Application
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            111000555
+    TypeText      Social Security            123456789
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
     TypeText      Zip                        31145               anchor=DOB
     TypeText      Country                    United States       anchor=DOB
     ClickText     Create Application 
-    ${applicationID}    GetText     APP-
+    ${applicationID}    GetText     APP-          timeout=60
     VerifyText          ${applicationId}
 
 Verify Application Entered in Salesforce
@@ -70,22 +69,24 @@ Upload PDF Bank Statements
     SwitchWindow               1
     ClickText                  Next
     VerifyText                 Documents for Applications and Fundings can be uploaded here
-    Sleep                      10
+    Sleep                      5
     ClickText                  Bank Statements   anchor=3
-    ClickText                  cloud_upload      css=off     DoubleClick=true                
-    QVision.ClickText          tests 
-    QVision.ClickText          suite
+    Sleep                      5
+    ClickText                  cloud_upload      css=off    DoubleClick=true  
+    Sleep                      5              
+    QVision.ClickUntil         suite             tests 
+    QVision.ClickUntil         files             suite
     QVision.ClickUntil         pdf               files 
-    QVision.ClickText          Feb-Aug.pdf         
-    QVision.ClickUntil         1 of 1          Open         anchor=Cancel   
-    VerifyText                 Feb-Aug.pdf
-    ClickText                  cloud_upload      css=off    DoubleClick=true                
-    QVision.ClickText          tests 
-    QVision.ClickText          suite
-    QVision.ClickUntil         pdf               files 
-    QVision.ClickText          Set.pdf         
-    QVision.ClickUntil         2 of 2            Open       anchor=Cancel    
+    QVision.DoubleClick        Set.pdf   
+    Sleep                      5      
+    #QVision.ClickUntil         Open       anchor=Cancel    
     VerifyText                 Set.pdf
+    ClickText                  cloud_upload      css=off     DoubleClick=true
+    Sleep                      5                
+    QVision.DoubleClick        Feb-Aug.pdf         
+    QVision.DoubleClick        Open         anchor=Cancel   
+    Sleep                      10
+    VerifyText                 Feb-Aug.pdf
     ClickText                  Next        
     ClickText                  I have read and agree to the above disclosure    css=off
     ClickText                  Submit
