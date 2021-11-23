@@ -41,8 +41,8 @@ Fill Out Partner Application
     TypeText      Last Name                  FUGATE
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
-    TypeText      DOB                        45611969
-    TypeText      Social Security            000888789
+    TypeText      DOB                        11011969
+    TypeText      Social Security            000654789
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
@@ -75,15 +75,15 @@ Upload PDF Bank Statements
     ClickText                  cloud_upload      css=off    DoubleClick=true           
     QVision.ClickUntil         suite             tests 
     QVision.ClickUntil         files             suite
-    QVision.ClickUntil         pdf               files 
-    QVision.ClickText          Set.pdf     
-    QVision.ClickText          Open       anchor=Cancel    
-   # VerifyText                 Set.pdf
-    ClickText                  cloud_upload      css=off     DoubleClick=true            
+    QVision.ClickUntil         pdf               files
+    QVision.ClickText          Set.pdf              
+    QVision.ClickUntil         Stipulations      Open              anchor=Cancel          
+    VerifyText                 Set.pdf
+    ClickText                  cloud_upload      css=off    DoubleClick=true            
     QVision.DoubleClick        Feb-Aug.pdf         
-    QVision.DoubleClick        Open         anchor=Cancel   
+    QVision.ClickUntil         Stipulations      Open           anchor=Cancel   
     Sleep                      10
-  #  VerifyText                 Feb-Aug.pdf
+    VerifyText                 Feb-Aug.pdf
     ClickText                  Next        
     ClickText                  I have read and agree to the above disclosure    css=off
     ClickText                  Submit
