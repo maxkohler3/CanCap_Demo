@@ -72,18 +72,17 @@ Upload PDF Bank Statements
     Sleep                      5
     ClickText                  Bank Statements   anchor=3
     Sleep                      5
-    ClickText                  cloud_upload      css=off    DoubleClick=true  
-    Sleep                      5              
+    ClickText                  cloud_upload      css=off    DoubleClick=true           
     QVision.ClickUntil         suite             tests 
     QVision.ClickUntil         files             suite
     QVision.ClickUntil         pdf               files 
-    QVision.DoubleClick        Set.pdf   
-    Sleep                      5      
-    #QVision.ClickUntil         Open       anchor=Cancel    
+    QVision.ClickText          Set.pdf   
+    #Sleep                      5      
+    QVision.DoubleClick        Open       anchor=Cancel    
     VerifyText                 Set.pdf
     ClickText                  cloud_upload      css=off     DoubleClick=true
     Sleep                      5                
-    QVision.DoubleClick        Feb-Aug.pdf         
+    QVision.ClickText          Feb-Aug.pdf         
     QVision.DoubleClick        Open         anchor=Cancel   
     Sleep                      10
     VerifyText                 Feb-Aug.pdf
