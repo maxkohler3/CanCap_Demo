@@ -19,7 +19,7 @@ Fill Out Partner Application
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            987123012
+    TypeText      Business Tax ID            987123666
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -42,7 +42,7 @@ Fill Out Partner Application
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            000654333
+    TypeText      Social Security            000000555
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
@@ -76,15 +76,15 @@ Upload PDF Bank Statements
     QVision.ClickUntil         suite             tests 
     QVision.ClickUntil         files             suite
     QVision.ClickUntil         pdf               files
-    QVision.ClickText          Set.pdf    
+    QVision.ClickUntil         Stipulations      Set.pdf    
     Sleep                      5         
-    QVision.ClickUntil         Stipulations      Open              anchor=Cancel   
+    QVision.ClickUntil         Stipulations      Open       anchor=Cancel   
     Sleep                      5       
     VerifyText                 Set.pdf
     ClickText                  cloud_upload      css=off    DoubleClick=true            
     QVision.ClickText          Feb-Aug.pdf  
     Sleep                      5       
-    QVision.ClickUntil         Stipulations      Open           anchor=Cancel   
+    QVision.ClickUntil         Stipulations      Open       anchor=Cancel   
     Sleep                      5
     VerifyText                 Feb-Aug.pdf
     ClickText                  Next        
