@@ -19,7 +19,7 @@ Fill Out Partner Application
     VerifyText    Tell us about your Client                     
 
     TypeText      Business Legal Name        BURKE FUEL & HEATING CO, INC
-    TypeText      Business Tax ID            000123456
+    TypeText      Business Tax ID            987123456
     ClickUntil    Health Services            Select Industry
     ClickText     Health Services
     TypeText      Doing Business As Name     BURKE FUEL & HEATING CO, INC
@@ -42,7 +42,7 @@ Fill Out Partner Application
     TypeText      Email                      MELONYE@canclsuat.testinator.com
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
-    TypeText      Social Security            123456789
+    TypeText      Social Security            000888789
     TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
@@ -78,12 +78,12 @@ Upload PDF Bank Statements
     QVision.ClickUntil         pdf               files 
     QVision.ClickText          Set.pdf     
     QVision.DoubleClick        Open       anchor=Cancel    
-    VerifyText                 Set.pdf
+   # VerifyText                 Set.pdf
     ClickText                  cloud_upload      css=off     DoubleClick=true            
-    QVision.ClickText          Feb-Aug.pdf         
+    QVision.DoubleClick        Feb-Aug.pdf         
     QVision.DoubleClick        Open         anchor=Cancel   
     Sleep                      10
-    VerifyText                 Feb-Aug.pdf
+  #  VerifyText                 Feb-Aug.pdf
     ClickText                  Next        
     ClickText                  I have read and agree to the above disclosure    css=off
     ClickText                  Submit
