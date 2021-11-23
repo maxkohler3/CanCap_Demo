@@ -77,7 +77,7 @@ Upload PDF Bank Statements
     QVision.ClickUntil         files             suite
     QVision.ClickUntil         pdf               files 
     QVision.ClickText          Set.pdf     
-    QVision.DoubleClick        Open       anchor=Cancel    
+    QVision.ClickText          Open       anchor=Cancel    
    # VerifyText                 Set.pdf
     ClickText                  cloud_upload      css=off     DoubleClick=true            
     QVision.DoubleClick        Feb-Aug.pdf         
