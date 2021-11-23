@@ -77,9 +77,7 @@ Upload PDF Bank Statements
     QVision.ClickUntil         files             suite
     QVision.ClickUntil         pdf               files
     QVision.ClickUntil         Stipulations      Set.pdf    
-    Sleep                      5         
-    QVision.ClickUntil         Stipulations      Open       anchor=Cancel   
-    Sleep                      5       
+    Sleep                      5          
     VerifyText                 Set.pdf
     ClickText                  cloud_upload      css=off    DoubleClick=true            
     QVision.ClickText          Feb-Aug.pdf  
