@@ -1,7 +1,7 @@
 *** Settings ***
 Library                   QForce
 Library                   QWeb
-Library                   QVision
+Library                   QVision    # this library uses an optical character recognition engine that allows CRT to interact with additional technologies
 Library                   String
 
 
@@ -12,7 +12,6 @@ ${salesforce_username}   automationlab3@canclsuat.testinator.com
 ${partner_url}           https://uat-cancapital.cs43.force.com/partnerportal            
 ${salesforce_url}        https://test.salesforce.com/                            # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}              ${login_url}/lightning/page/home
-${gmail_pass}            Copado2021
 
 
 *** Keywords ***
