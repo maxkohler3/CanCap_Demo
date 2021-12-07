@@ -22,7 +22,6 @@ Setup Browser
     SetConfig             LineBreak                   ${EMPTY}               #\ue000
     SetConfig             DefaultTimeout              20s                    #sometimes salesforce is slow
 
-
 End suite
     Close All Browsers
 
