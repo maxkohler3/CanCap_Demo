@@ -7,7 +7,7 @@ Suite Teardown                End suite
 Fill Out Partner Application
     [tags]        Partner Portal
     Appstate      Partner Login
-    VerifyText    Dashboard    timeout=30    
+    VerifyText    Dashboard    timeout=30    #set timeout to give page additional time to load
     
     ClickText     Create New
     ClickUntil    Expansion         Select Use of Funds
@@ -43,7 +43,7 @@ Fill Out Partner Application
     TypeText      Mobile Phone               5732212172
     TypeText      DOB                        11011969
     TypeText      Social Security            999666555
-    TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off  
+    TypeText      Street Address             PO BOX 450763       anchor=DOB   css=off 
     TypeText      City                       ATLANTA             anchor=DOB     
     TypeText      State                      GA                  anchor=DOB
     TypeText      Zip                        31145               anchor=DOB
